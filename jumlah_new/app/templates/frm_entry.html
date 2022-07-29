@@ -1,0 +1,28 @@
+{% extends "header_footer.html" %}
+{% block content %}    
+    <h1>Arithmetic</h1>
+    <table>
+    <form action="frm_entry" method="post" novalidate>
+    {{ formnya.hidden_tag() }}
+    <tr>
+      <td>{{ formnya.value_1.label }}</td><td>:</td>
+      <td>{{ formnya.value_1(size=20) }}</td>
+    </tr>    
+    <tr>
+      <td>{{ formnya.value_2.label }}</td><td>:</td>
+      <td>{{ formnya.value_2(size=20) }}</td>
+    </tr>    
+    <tr>
+       <td>{{ formnya.operatornya.label }}</td><td>:</td>
+       <td>{{ formnya.operatornya }}</td>
+    </tr>
+    <tr>
+       <td>Result</td><td>:</td><td>{{ xresultnya }}</td>
+    </tr>     
+    <tr>
+       <td>Remark</td><td>:</td><td>{{ remnya }}</td>
+    </tr>
+    <tr>
+       <td>{{ formnya.submit() }} </td>
+    </tr>
+{% endblock %}    

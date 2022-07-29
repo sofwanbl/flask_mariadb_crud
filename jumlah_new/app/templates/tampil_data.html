@@ -1,0 +1,16 @@
+{% extends "header_footer.html" %}
+{% block content %}    
+  <h1>Arithmetic</h1>
+  <table border=1>
+  <th>No</th><th>Value 1</th><th>Value 2</th><th>Operator</th><th>Result</th><th>Remark</th><th>Options</th>
+    {% for rows in hasilnya %}
+    <tr>
+      <td>{{ loop.index }}</td><td>{{ rows[1] }}</td><td>{{ rows[2] }}</td>
+      <td>{{ rows[3] }}</td><td>{{ rows[4] }}</td>
+      <td>{{ rows[5] }}</td><td><a href="{{ url_for('frm_edit_data',id=rows[0])}}">Edit</a> | 
+                                <a href="{{ url_for('delete_data',id=rows[0])}}" onClick="return asking()">Delete</a>
+                            </td>
+    </tr>  
+    {% endfor %}
+</table>
+{% endblock %}   

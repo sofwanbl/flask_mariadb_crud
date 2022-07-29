@@ -1,0 +1,24 @@
+<DOCTYPE html>
+<html>
+   <head>
+      <title>Entry Form</title>
+      <script>
+      function asking()
+       {
+         askingnya=confirm("Are you sure to delete this record ?");         
+         if (askingnya==true)
+           {
+             return True;             
+           }
+        else
+           {
+             return False;             
+           }              
+       }
+      </script>
+   </head>
+   <body>
+     <a href="/">Home</a> | <a href="/frm_entry">Entry Data</a> | <a href="/display_data">Display Data</a>
+     {% block content %}{% endblock %}
+   </body>
+</html>

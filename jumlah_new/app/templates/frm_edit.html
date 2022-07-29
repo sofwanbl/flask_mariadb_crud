@@ -1,0 +1,31 @@
+{% extends "header_footer.html" %}
+{% block content %}
+<h1>Aritmetika</h1>
+<table>
+<form action="" method="post" novalidate>
+{{ form.hidden_tag() }}
+<tr>
+  <td>{{ form.value_1.label}}</td><td>:</td>
+  <td>{{ form.value_1(size=20) }}</td>
+</tr>
+<tr>
+  <td>{{ form.value_2.label}}</td><td>:</td>
+  <td>{{ form.value_2(size=20) }}</td>
+</tr>
+<tr>
+  <td>{{ form.operatornya.label }}</td><td>:</td>
+  <td>{{ form.operatornya }}</td>
+</tr>
+<tr>
+  <td>{{ form.submit() }}</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>Result</td><td>:</td><td>{{ hasilnya }}</td>
+</tr>
+<tr>
+<td>Remarks</td><td>:</td><td>{{ ketnya }}</td>
+</tr>
+</table>
+{% endblock %}
