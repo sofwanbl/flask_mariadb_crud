@@ -1,0 +1,1 @@
+# flask_mariadb_crud
